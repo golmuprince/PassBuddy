@@ -55,6 +55,3 @@ def build_class(cert_name: str):
     """,
         tools=[load_plan, load_quiz_bank, load_today_questions, save_today_questions, save_study_log, mark_attendance, transfer_to_agent],
     )
-
-
-class_agent = build_class("리눅스마스터 2급")

@@ -59,6 +59,3 @@ def build_quiz(cert_name: str):
     """,
         tools=[load_plan, load_quiz_bank, load_today_questions, load_wrong_questions, save_quiz_log, mark_attendance, transfer_to_agent],
     )
-
-
-quiz_agent = build_quiz("리눅스마스터 2급")

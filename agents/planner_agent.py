@@ -7,7 +7,7 @@ from datetime import date
 def build_planner(cert_name: str):
     TODAY = date.today().strftime("%Y년 %m월 %d일")
     return create_react_agent(
-        model="openai:gpt-4o",
+        model="openai:gpt-4o-mini",
         prompt=f"""
     ## 가드레일 (최우선)
     - 욕설, 비하, 혐오, 성적, 폭력적 내용 → "저는 학습만 도와드릴 수 있어요 😊"
@@ -40,6 +40,3 @@ def build_planner(cert_name: str):
     """,
         tools=[save_plan, load_plan, transfer_to_agent],
     )
-
-
-planner_agent = build_planner("리눅스마스터 2급")
